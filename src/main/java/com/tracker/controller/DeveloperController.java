@@ -30,9 +30,9 @@ public class DeveloperController {
     public ResponseEntity<List<DeveloperDto>> getAllDevelopers() {
         return ResponseEntity.ok(this.developerService.getAllDevelopers());
     }
-    @PutMapping("/updateDeveloper")
-    public ResponseEntity<DeveloperDto> updateDeveloper(@Valid @RequestBody DeveloperDto developerDto) {
-        return ResponseEntity.ok(this.developerService.updateDeveloper(developerDto));
+    @PutMapping("/updateDeveloper/{name}")
+    public ResponseEntity<DeveloperDto> updateDeveloper(@PathVariable String name,@Valid @RequestBody DeveloperDto developerDto) {
+        return ResponseEntity.ok(this.developerService.updateDeveloper(name, developerDto));
     }
 
     @DeleteMapping("/developer/{name}")

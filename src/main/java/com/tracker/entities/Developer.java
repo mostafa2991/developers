@@ -20,5 +20,7 @@ public class Developer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    @OneToOne(mappedBy = "developer")
+    private Issue issue;
 
 }

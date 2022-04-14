@@ -10,7 +10,7 @@ public interface DeveloperService {
 
     List<DeveloperDto> getAllDevelopers();
     DeveloperDto getDeveloperByName(String name);
-    DeveloperDto updateDeveloper(DeveloperDto developerDto);
+    DeveloperDto updateDeveloper(String name,DeveloperDto developerDto);
     String deleteDeveloperByName(String name);
     DeveloperDto addDeveloper(DeveloperDto developerDto);
 
